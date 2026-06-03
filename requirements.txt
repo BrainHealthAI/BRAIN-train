@@ -1,0 +1,39 @@
+# MedQA Llama-3.1-8B SFT + SASR — RunPod training dependencies
+# Mirrors setup_runpod.sh. Recommended pod image:
+#   runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
+
+# Core ML stack
+torch>=2.3.0
+torchaudio
+transformers>=4.45.0
+accelerate>=0.34.0
+peft>=0.12.0
+bitsandbytes>=0.43.0
+trl>=0.11.0
+datasets>=2.20.0
+huggingface_hub>=0.24.0
+sentencepiece
+protobuf
+safetensors
+
+# Metrics (BERTScore / ROUGE / BLEU / GLEU / METEOR)
+bert-score
+rouge-score
+sacrebleu
+nltk
+evaluate
+sentence-transformers
+scikit-learn
+pandas
+numpy
+matplotlib
+pyarrow
+
+# Tracking
+wandb
+
+# Multilingual / Darija helpers
+sacremoses
+
+# After install, fetch NLTK data:
+#   python -c "import nltk; [nltk.download(p) for p in ['punkt','punkt_tab','wordnet','omw-1.4']]"
