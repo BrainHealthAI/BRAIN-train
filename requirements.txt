@@ -1,0 +1,24 @@
+# HELIX-FT v2 — training & evaluation dependencies
+# Pinned to the versions validated on the RunPod L40S pod (PyTorch 2.4.x base image).
+# Do NOT widen transformers to >=4.50 — it requires torch>=2.5 (device_mesh).
+
+# Core ML stack (versions locked in launch_v2.sh stage 0)
+torch>=2.4,<2.5
+transformers==4.46.3
+peft==0.13.2
+trl==0.11.4
+bitsandbytes==0.43.3
+accelerate==0.34.2
+datasets==2.21.0
+
+# Generation / MCQ evaluation
+sentence-transformers
+rouge_score
+numpy
+
+# Plotting & tracking
+matplotlib
+wandb
+
+# HF push / hub access
+huggingface_hub
