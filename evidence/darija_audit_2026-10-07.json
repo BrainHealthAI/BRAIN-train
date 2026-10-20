@@ -1,0 +1,27 @@
+{
+  "status": "Historical audit excerpt; arithmetic checked on 2026-10-20, raw dataset not re-evaluated",
+  "source_artifact": "audit_results.json, data_checks.DarijaMCQ",
+  "source_sha256": "39c37ea53b6b69a04a2c1ce45532f3c490cc6e2c8e0439f9b8b1d4136f39976e",
+  "source_script": "audit_checks.py, DarijaMCQ analysis",
+  "source_script_sha256": "55ece2f6b8281707f08b4f7d1fec1a68acb23a2e39f5242e1a01f723005ba021",
+  "dataset": "BrainHealthAI/MedQA-Darija-MCQ-500",
+  "rule": "Choose the unique option containing طبيب; otherwise choose the shortest option in characters, first option on ties.",
+  "full500": {
+    "n": 500,
+    "empty_source_pair_ids": 500,
+    "shortest_correct": 250,
+    "doctor_else_shortest_correct": 358
+  },
+  "first200": {
+    "n": 200,
+    "empty_source_pair_ids": 200,
+    "shortest_correct": 72,
+    "doctor_else_shortest_correct": 132
+  },
+  "limitations": [
+    "This excerpt is not a raw-data reproduction or a clinical baseline.",
+    "The historical HELIX JSON omits item identifiers and dataset hashes; equality of sampled items is conditional on unchanged dataset contents/order.",
+    "The heuristic may exploit answer-style cues and has not been validated on an independent set.",
+    "No individual-level significance test can be reconstructed from these aggregate counts."
+  ]
+}
