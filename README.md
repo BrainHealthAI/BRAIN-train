@@ -79,9 +79,10 @@ cannot establish whether HELIX underperforms it.
   this training code or benchmark results does not establish application behavior,
   deployment status, or clinical validation.
 
-The upstream project is [BrainHealthAI/BRAIN-train](https://github.com/BrainHealthAI/BRAIN-train);
-this working fork is [zadbox/BRAIN-train](https://github.com/zadbox/BRAIN-train), branch
-[`Training_v2`](https://github.com/zadbox/BRAIN-train/tree/Training_v2). This documentation
+The canonical repository is [BrainHealthAI/BRAIN-train](https://github.com/BrainHealthAI/BRAIN-train),
+branch [`Training_v2`](https://github.com/BrainHealthAI/BRAIN-train/tree/Training_v2); the
+20 October 2026 documentation revision was prepared in
+[zadbox/BRAIN-train](https://github.com/zadbox/BRAIN-train). This documentation
 describes that branch's pipeline, not every upstream branch or later artifact revision.
 
 ## Limitations and evidence gaps
@@ -92,6 +93,8 @@ describes that branch's pipeline, not every upstream branch or later artifact re
 - The 200 Darija items are only a subset of the named 500-item dataset. An audit of the
   dataset reported empty `source_pair_id` values and a simple answer-choice heuristic
   scoring 132/200 (66%) on the first 200 rows, compared with HELIX's reported 55%.
+  On all 500 items, choosing the shortest option alone is correct in 250 cases (50.0%),
+  a strong answer-length cue that must be removed or controlled in any rebuilt set.
   The [archived counts and method](evidence/darija_audit_2026-10-07.json) are supplied.
   `final_eval.py` uses the first items, but absent dataset hashes/item IDs, identity with
   the historical HELIX subset is not independently established. Treat provenance and
@@ -130,7 +133,7 @@ safe escalation against cited evidence; report paired results and subgroup count
 this distinct from short-term benchmark remeasurement and do not describe it as completed.
 
 Related maintained documentation:
-[BrainMed research](https://github.com/zadbox/BrainMed-8B) and
+[BrainMed research](https://github.com/BrainHealthAI/BrainMed-8B) and
 [application evidence scope](https://github.com/zadbox/helix-brain-health).
 
 ## Runnable workflow
